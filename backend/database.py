@@ -221,3 +221,41 @@ def get_recent_outages(limit=5):
         )
 
         return cursor.fetchall()
+
+def get_latest_measurement(check_type):
+    """Return the newest measurement for a given check type."""
+
+    with get_connection() as connection:
+        cursor = connection.execute(
+            """
+            SELECT
+                recorded_at,
+                check_type,
+                target,
+                is_healthy,
+                latency_ms,
+                packet_loss,
+                details
+            FROM measurements
+            WHERE check_type = ?
+            ORDER BY id DESC
+            LIMIT 1
+            """,
+            (check_type,),
+        )
+
+        return cursor.fetchone()
+
+
+def get_measurement_count():
+    """Return the total number of stored measurements."""
+
+    with get_connection() as connection:
+        cursor = connection.execute(
+            """
+            SELECT COUNT(*)
+            FROM measurements
+            """
+        )
+
+        return cursor.fetchone()[0]
