@@ -1,12 +1,19 @@
 import re
 import socket
 import subprocess
+import time
+from datetime import datetime
 
 from database import (
-    get_recent_measurements,
+    end_outage,
+    get_open_outage,
     initialize_database,
     save_measurement,
+    start_outage,
 )
+
+
+CHECK_INTERVAL_SECONDS = 30
 
 
 def get_default_gateway():
@@ -40,7 +47,7 @@ def get_default_gateway():
 
 
 def ping_host(host, count=4):
-    """Ping a host and return its status, latency, and packet loss."""
+    """Ping a host and return status, latency, and packet loss."""
 
     result = subprocess.run(
         [
@@ -108,7 +115,7 @@ def check_dns():
 
 
 def display_ping_result(name, result):
-    """Print a ping result in a readable format."""
+    """Print a ping result."""
 
     status = (
         "ONLINE"
@@ -129,49 +136,50 @@ def display_ping_result(name, result):
     )
 
 
-def display_recent_measurements():
-    """Display the most recently saved database measurements."""
+def update_outage_status(internet_online):
+    """Start or resolve an outage based on internet state."""
 
-    measurements = get_recent_measurements(6)
+    open_outage = get_open_outage()
 
-    print()
-    print("Recent Stored Measurements")
-    print("-" * 60)
+    if not internet_online and open_outage is None:
+        outage_id = start_outage()
 
-    for measurement in measurements:
-        (
-            recorded_at,
-            check_type,
-            target,
-            is_healthy,
-            latency_ms,
-            packet_loss,
-            details,
-        ) = measurement
+        print()
+        print("!!! INTERNET OUTAGE DETECTED !!!")
+        print(f"Outage ID: {outage_id}")
 
-        status = "OK" if is_healthy else "FAILED"
+    elif internet_online and open_outage is not None:
+        resolved = end_outage()
 
+        duration = round(
+            resolved["duration_seconds"],
+            1,
+        )
+
+        print()
+        print("*** INTERNET CONNECTION RESTORED ***")
         print(
-            f"{recorded_at} | "
-            f"{check_type:<8} | "
-            f"{status:<6} | "
-            f"{target}"
+            f"Outage duration: "
+            f"{duration} seconds"
         )
 
 
-def main():
-    initialize_database()
+def run_health_check():
+    """Run one complete network health check."""
+
+    timestamp = datetime.now().astimezone()
 
     print()
-    print("NetWatch - Network Health Check")
-    print("-" * 60)
+    print("=" * 65)
+    print(
+        "NetWatch Check - "
+        f"{timestamp.strftime('%Y-%m-%d %I:%M:%S %p')}"
+    )
+    print("=" * 65)
 
     gateway = get_default_gateway()
 
     if gateway:
-        print(f"Gateway:   {gateway}")
-        print()
-
         router_result = ping_host(gateway)
 
         display_ping_result(
@@ -188,12 +196,13 @@ def main():
         )
 
     else:
-        print("Gateway:   Unable to detect")
-        print()
+        print("Router:   Gateway could not be detected")
 
     internet_target = "1.1.1.1"
 
-    internet_result = ping_host(internet_target)
+    internet_result = ping_host(
+        internet_target
+    )
 
     display_ping_result(
         "Internet:",
@@ -231,13 +240,50 @@ def main():
         details=dns_result["resolved_ip"],
     )
 
-    print("-" * 60)
+    update_outage_status(
+        internet_result["online"]
+    )
 
-    display_recent_measurements()
+
+def main():
+    initialize_database()
 
     print()
-    print("Measurements saved to data/netwatch.db")
-    print()
+    print("NetWatch Continuous Monitor")
+    print(
+        f"Checking network every "
+        f"{CHECK_INTERVAL_SECONDS} seconds."
+    )
+    print("Press Ctrl+C to stop NetWatch.")
+
+    try:
+        while True:
+            start_time = time.monotonic()
+
+            run_health_check()
+
+            elapsed = (
+                time.monotonic()
+                - start_time
+            )
+
+            sleep_time = max(
+                0,
+                CHECK_INTERVAL_SECONDS - elapsed,
+            )
+
+            print()
+            print(
+                f"Next check in "
+                f"{round(sleep_time)} seconds..."
+            )
+
+            time.sleep(sleep_time)
+
+    except KeyboardInterrupt:
+        print()
+        print()
+        print("NetWatch stopped.")
 
 
 if __name__ == "__main__":
