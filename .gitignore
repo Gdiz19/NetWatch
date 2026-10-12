@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Environment variables / secrets
+.env
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Frontend
+node_modules/
+dist/
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
