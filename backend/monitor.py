@@ -2,6 +2,12 @@ import re
 import socket
 import subprocess
 
+from database import (
+    get_recent_measurements,
+    initialize_database,
+    save_measurement,
+)
+
 
 def get_default_gateway():
     """Find the active default IPv4 gateway on Windows."""
@@ -123,7 +129,39 @@ def display_ping_result(name, result):
     )
 
 
+def display_recent_measurements():
+    """Display the most recently saved database measurements."""
+
+    measurements = get_recent_measurements(6)
+
+    print()
+    print("Recent Stored Measurements")
+    print("-" * 60)
+
+    for measurement in measurements:
+        (
+            recorded_at,
+            check_type,
+            target,
+            is_healthy,
+            latency_ms,
+            packet_loss,
+            details,
+        ) = measurement
+
+        status = "OK" if is_healthy else "FAILED"
+
+        print(
+            f"{recorded_at} | "
+            f"{check_type:<8} | "
+            f"{status:<6} | "
+            f"{target}"
+        )
+
+
 def main():
+    initialize_database()
+
     print()
     print("NetWatch - Network Health Check")
     print("-" * 60)
@@ -141,15 +179,33 @@ def main():
             router_result,
         )
 
+        save_measurement(
+            check_type="router",
+            target=gateway,
+            is_healthy=router_result["online"],
+            latency_ms=router_result["latency_ms"],
+            packet_loss=router_result["packet_loss"],
+        )
+
     else:
         print("Gateway:   Unable to detect")
         print()
 
-    internet_result = ping_host("1.1.1.1")
+    internet_target = "1.1.1.1"
+
+    internet_result = ping_host(internet_target)
 
     display_ping_result(
         "Internet:",
         internet_result,
+    )
+
+    save_measurement(
+        check_type="internet",
+        target=internet_target,
+        is_healthy=internet_result["online"],
+        latency_ms=internet_result["latency_ms"],
+        packet_loss=internet_result["packet_loss"],
     )
 
     dns_result = check_dns()
@@ -168,7 +224,19 @@ def main():
             f"{'FAILED':<10}"
         )
 
+    save_measurement(
+        check_type="dns",
+        target="example.com",
+        is_healthy=dns_result["working"],
+        details=dns_result["resolved_ip"],
+    )
+
     print("-" * 60)
+
+    display_recent_measurements()
+
+    print()
+    print("Measurements saved to data/netwatch.db")
     print()
 
 
