@@ -554,6 +554,6 @@ Possible future versions of NetWatch could include:
 Computer Engineering Student  
 University of Central Florida
 
-## License
+## Project Status
 
-This project is currently intended as a personal and educational portfolio project.
+NetWatch V1 is complete and currently maintained as a personal and educational portfolio project.
