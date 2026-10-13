@@ -6,7 +6,7 @@ import ipaddress
 import json
 from datetime import datetime
 
-from database import (
+from backend.database import (
     end_outage,
     get_open_outage,
     initialize_database,
@@ -350,11 +350,13 @@ def run_health_check():
     update_outage_status(
         internet_result["online"]
     )
-    
+
     check_local_devices()
 
 
-def main():
+def run_monitor_loop(stop_event=None):
+    """Continuously monitor the network until stopped."""
+
     initialize_database()
 
     print()
@@ -363,10 +365,12 @@ def main():
         f"Checking network every "
         f"{CHECK_INTERVAL_SECONDS} seconds."
     )
-    print("Press Ctrl+C to stop NetWatch.")
 
     try:
-        while True:
+        while (
+            stop_event is None
+            or not stop_event.is_set()
+        ):
             start_time = time.monotonic()
 
             run_health_check()
@@ -387,12 +391,22 @@ def main():
                 f"{round(sleep_time)} seconds..."
             )
 
-            time.sleep(sleep_time)
+            if stop_event is None:
+                time.sleep(sleep_time)
+
+            else:
+                if stop_event.wait(sleep_time):
+                    break
 
     except KeyboardInterrupt:
-        print()
-        print()
-        print("NetWatch stopped.")
+        pass
+
+    print()
+    print("NetWatch monitoring stopped.")
+
+
+def main():
+    run_monitor_loop()
 
 
 if __name__ == "__main__":

@@ -1,5 +1,13 @@
+import threading
+from pathlib import Path
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+from backend.monitor import run_monitor_loop
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+FRONTEND_DIST = PROJECT_ROOT / "frontend" / "dist"
 
 from backend.database import (
     get_devices,
@@ -28,11 +36,38 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+monitor_stop_event = threading.Event()
+monitor_thread = None
+
 @app.on_event("startup")
 def startup_event():
-    """Make sure the database exists when the API starts."""
+    """Initialize NetWatch and start background monitoring."""
+
+    global monitor_thread
 
     initialize_database()
+
+    monitor_stop_event.clear()
+
+    monitor_thread = threading.Thread(
+        target=run_monitor_loop,
+        args=(monitor_stop_event,),
+        daemon=True,
+    )
+
+    monitor_thread.start()
+
+@app.on_event("shutdown")
+def shutdown_event():
+    """Stop the background monitor when FastAPI shuts down."""
+
+    monitor_stop_event.set()
+
+    if (
+        monitor_thread is not None
+        and monitor_thread.is_alive()
+    ):
+        monitor_thread.join(timeout=5)
 
 def device_to_dict(device):
     """Convert a database device row into JSON-friendly data."""
@@ -298,3 +333,32 @@ def devices():
             for row in rows
         ],
     }
+
+if FRONTEND_DIST.exists():
+    app.mount(
+        "/assets",
+        StaticFiles(
+            directory=FRONTEND_DIST / "assets"
+        ),
+        name="frontend-assets",
+    )
+
+
+@app.get(
+    "/dashboard",
+    include_in_schema=False,
+)
+def dashboard():
+    """Serve the NetWatch production dashboard."""
+
+    index_file = FRONTEND_DIST / "index.html"
+
+    if not index_file.exists():
+        return {
+            "error": (
+                "Frontend has not been built. "
+                "Run npm run build inside frontend."
+            )
+        }
+
+    return FileResponse(index_file)
