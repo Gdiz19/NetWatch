@@ -100,6 +100,9 @@ function App() {
 
   const [devices, setDevices] =
     useState<Device[]>([]);  
+  
+  const [currentTime, setCurrentTime] =
+    useState<number | null>(null);
 
   async function loadDashboard() {
     try {
@@ -170,12 +173,28 @@ function App() {
   }
 
   useEffect(() => {
-    loadDashboard();
+    const initialLoad = window.setTimeout(() => {
+      void loadDashboard();
+    }, 0);
 
-    const interval =
-      setInterval(loadDashboard, 5000);
+    const interval = window.setInterval(() => {
+      void loadDashboard();
+    }, 5000);
 
-    return () => clearInterval(interval);
+    return () => {
+      window.clearTimeout(initialLoad);
+      window.clearInterval(interval);
+    };
+  }, []);
+
+  useEffect(() => {
+    const clock = window.setInterval(() => {
+      setCurrentTime(Date.now());
+    }, 1000);
+
+    return () => {
+      window.clearInterval(clock);
+    };
   }, []);
 
   function latency(
@@ -229,6 +248,28 @@ function App() {
   const dnsHealthy =
     status?.dns?.is_healthy ?? false;
 
+  const lastMeasurementTime =
+    status?.internet?.recorded_at
+      ? new Date(status.internet.recorded_at)
+      : null;
+
+  const secondsSinceLastMeasurement =
+    lastMeasurementTime && currentTime !== null
+      ? Math.floor(
+          (currentTime - lastMeasurementTime.getTime()) / 1000
+        )
+      : null;
+
+  const monitorStale =
+    !lastMeasurementTime ||
+    (
+      secondsSinceLastMeasurement !== null &&
+      secondsSinceLastMeasurement > 90
+    );
+
+  const activeOutage =
+    outages.find((outage) => outage.active);
+  
   return (
     <div className="app">
       <header className="header">
@@ -237,11 +278,33 @@ function App() {
           <p>Network Health Dashboard</p>
         </div>
 
-        <div className="live-indicator">
+        <div
+          className={
+            monitorStale
+              ? "live-indicator stale"
+              : "live-indicator"
+          }
+        >
           <span className="live-dot"></span>
-          Live
+
+          {monitorStale
+            ? "Monitor Stale"
+            : "Live"}
         </div>
       </header>
+
+      {monitorStale && (
+        <div className="warning-banner">
+          NetWatch has not received a new internet measurement
+          in over 90 seconds. The monitoring service may not be running.
+        </div>
+      )}
+
+      {activeOutage && (
+        <div className="outage-alert">
+          Internet outage currently detected.
+        </div>
+      )}
 
       {error && (
         <div className="error-banner">

@@ -289,3 +289,31 @@
     text-align: right;
   }
 }
+
+.live-indicator.stale {
+  border-color: #725b28;
+  color: #ffd878;
+}
+
+.live-indicator.stale .live-dot {
+  background: #f6c85f;
+}
+
+.warning-banner {
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border: 1px solid #725b28;
+  border-radius: 12px;
+  background: #302713;
+  color: #ffd878;
+}
+
+.outage-alert {
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border: 1px solid #69303a;
+  border-radius: 12px;
+  background: #381b20;
+  color: #ffb1b8;
+  font-weight: 600;
+}

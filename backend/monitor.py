@@ -15,6 +15,11 @@ from backend.database import (
     save_device,
 )
 
+NO_WINDOW = getattr(
+    subprocess,
+    "CREATE_NO_WINDOW",
+    0,
+)
 
 CHECK_INTERVAL_SECONDS = 30
 
@@ -39,6 +44,7 @@ def get_default_gateway():
         command,
         capture_output=True,
         text=True,
+        creationflags=NO_WINDOW,
     )
 
     gateway = result.stdout.strip()
@@ -64,6 +70,7 @@ def ping_host(host, count=4):
         capture_output=True,
         text=True,
         errors="ignore",
+        creationflags=NO_WINDOW,
     )
 
     output = result.stdout
@@ -190,6 +197,7 @@ def discover_local_devices():
         command,
         capture_output=True,
         text=True,
+        creationflags=NO_WINDOW,
     )
 
     output = result.stdout.strip()

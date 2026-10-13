@@ -1,0 +1,967 @@
+
+NetWatch Continuous Monitor
+Checking network every 30 seconds.
+
+=================================================================
+NetWatch Check - 2026-10-13 01:31:48 AM
+=================================================================
+INFO:     127.0.0.1:54017 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53305 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65345 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61138 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51310 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61138 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54017 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53305 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51310 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65345 - "GET /history?limit=120 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:51310 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61138 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53305 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65345 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54017 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 27 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 14 seconds...
+INFO:     127.0.0.1:62533 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61173 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54017 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62409 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62681 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+
+NetWatch Continuous Monitor
+Checking network every 30 seconds.
+
+=================================================================
+NetWatch Check - 2026-10-13 01:37:24 AM
+=================================================================
+INFO:     127.0.0.1:63512 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59229 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55920 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59341 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50083 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59341 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63512 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59229 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55920 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50083 - "GET /status HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+INFO:     127.0.0.1:57479 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62249 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65009 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50658 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64321 - "GET /status HTTP/1.1" 200 OK
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+INFO:     127.0.0.1:50658 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65009 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57479 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64321 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62249 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53577 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59453 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62249 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56729 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59147 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51266 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59635 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59147 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62749 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53159 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+
+NetWatch Continuous Monitor
+Checking network every 30 seconds.
+
+=================================================================
+NetWatch Check - 2026-10-13 01:43:52 AM
+=================================================================
+INFO:     127.0.0.1:51331 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57136 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59110 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52958 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59095 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52958 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51331 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57136 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59095 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59110 - "GET /history?limit=120 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 22 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+INFO:     127.0.0.1:59110 - "GET /dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59110 - "GET /assets/index-C9BSVQHm.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59095 - "GET /assets/index-BE3-kdOb.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52958 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59110 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57136 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51331 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59095 - "GET /status HTTP/1.1" 200 OK
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+INFO:     127.0.0.1:64333 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53936 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53575 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56859 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60200 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56859 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54242 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61037 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50358 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60200 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50358 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56859 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61037 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54242 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60200 - "GET /status HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:44:22 AM
+=================================================================
+INFO:     127.0.0.1:53172 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50293 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49271 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54886 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "GET /status HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:60819 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61806 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57735 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54812 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+INFO:     127.0.0.1:56063 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60579 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54812 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64825 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56418 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64825 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56063 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54812 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60579 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56418 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60579 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61563 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54812 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56063 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56418 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56063 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54812 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61563 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54052 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56418 - "GET /status HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:44:52 AM
+=================================================================
+INFO:     127.0.0.1:50924 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53294 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52205 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55735 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56418 - "GET /status HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:55735 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50924 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52205 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53294 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56418 - "GET /status HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 23 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+INFO:     127.0.0.1:53294 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55735 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52205 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50924 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56418 - "GET /status HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:45:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 20 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:45:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:60235 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52091 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58552 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52458 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49770 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 21 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:46:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 21 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:46:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:61044 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58106 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49595 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60669 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54561 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 22 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:47:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:47:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:50758 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52427 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52702 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64490 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50099 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:48:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:48:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:63516 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64566 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54707 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57121 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57591 - "GET /history?limit=120 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 19 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:49:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:49:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:63536 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51415 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49273 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54961 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64233 - "GET /devices HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 23 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:50:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 20 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:50:52 AM
+=================================================================
+INFO:     127.0.0.1:54429 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55921 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63639 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52072 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /history?limit=120 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:51916 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63639 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55921 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52072 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /devices HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+INFO:     127.0.0.1:52072 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54086 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55921 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63639 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52072 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55921 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54086 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63639 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50383 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54394 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49231 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59817 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57508 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49231 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57508 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49222 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55798 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59817 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:51:22 AM
+=================================================================
+INFO:     127.0.0.1:52135 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59817 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54031 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56255 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55583 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:53243 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60895 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49607 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52367 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57610 - "GET /devices HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+INFO:     127.0.0.1:54605 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57846 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61665 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64989 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57610 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57610 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65127 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53548 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60038 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54760 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51146 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63393 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54760 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59807 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53430 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55357 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59706 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52562 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53430 - "GET /status HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:51:52 AM
+=================================================================
+INFO:     127.0.0.1:63439 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62396 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51865 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53430 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55524 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:63051 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49446 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50882 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57021 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53726 - "GET /status HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:52:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 23 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:52:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:59805 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62097 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54674 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64782 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50646 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 23 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+INFO:     127.0.0.1:56218 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63734 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56697 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49506 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60074 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56697 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56218 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63734 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60074 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49506 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:53:22 AM
+=================================================================
+INFO:     127.0.0.1:50747 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49276 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59131 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63609 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49506 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55519 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52477 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49506 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56629 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50120 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 27 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+INFO:     127.0.0.1:50120 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60375 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58196 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52981 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49493 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+INFO:     127.0.0.1:49740 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58196 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61527 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49493 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52981 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65505 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52219 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52981 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64059 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63406 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50385 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63021 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63406 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59325 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52008 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:53:52 AM
+=================================================================
+INFO:     127.0.0.1:62051 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52403 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56142 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63769 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60495 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58587 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54984 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60495 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61627 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51373 - "GET /history?limit=120 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+INFO:     127.0.0.1:54018 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52399 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51373 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62972 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49855 - "GET /history?limit=120 HTTP/1.1" 200 OK
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+INFO:     127.0.0.1:54118 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62543 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60095 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50244 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61709 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62477 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62342 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61709 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58121 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62327 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54579 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50943 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58381 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62327 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61272 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:54:22 AM
+=================================================================
+INFO:     127.0.0.1:62327 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60798 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52216 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58381 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61272 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62020 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58762 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52257 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57834 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50945 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+INFO:     127.0.0.1:55431 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56127 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53016 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65198 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60634 - "GET /status HTTP/1.1" 200 OK
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+INFO:     127.0.0.1:64422 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58655 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60634 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62203 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53031 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62203 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50509 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63797 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53031 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60634 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49188 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56239 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50240 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60738 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57133 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:54:52 AM
+=================================================================
+INFO:     127.0.0.1:50830 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50471 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53649 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57133 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55076 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54583 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55076 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60967 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49648 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52495 - "GET /history?limit=120 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+INFO:     127.0.0.1:64626 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55660 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54882 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54822 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52495 - "GET /status HTTP/1.1" 200 OK
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+INFO:     127.0.0.1:56346 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63117 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50711 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60910 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52495 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49512 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51424 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60204 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65362 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50680 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52188 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49267 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59249 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50680 - "GET /status HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:55:22 AM
+=================================================================
+INFO:     127.0.0.1:51136 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64232 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55292 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61855 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50680 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57590 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50680 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63894 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49383 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51527 - "GET /history?limit=120 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+INFO:     127.0.0.1:50940 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51045 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63875 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60257 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51527 - "GET /status HTTP/1.1" 200 OK
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+INFO:     127.0.0.1:62104 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51527 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58426 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55663 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57620 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64370 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60070 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64295 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50857 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57707 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56956 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57707 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57206 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58773 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59207 - "GET /history?limit=120 HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:55:52 AM
+=================================================================
+INFO:     127.0.0.1:56956 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58773 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57206 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57707 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59207 - "GET /status HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:49421 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63033 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54188 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59207 - "GET /status HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 21 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+INFO:     127.0.0.1:57335 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52986 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50870 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50162 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59207 - "GET /status HTTP/1.1" 200 OK
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+INFO:     127.0.0.1:61382 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64009 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55967 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57546 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59207 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53166 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64877 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56789 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50339 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61645 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53895 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61645 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57939 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58657 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56268 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:56:22 AM
+=================================================================
+INFO:     127.0.0.1:51513 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56268 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54803 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50204 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61933 - "GET /history?limit=120 HTTP/1.1" 200 OK
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:61235 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63283 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49472 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58826 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61933 - "GET /status HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 23 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+INFO:     127.0.0.1:59242 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54701 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65525 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53754 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61933 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50608 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59347 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52237 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61933 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65068 - "GET /history?limit=120 HTTP/1.1" 200 OK
+
+=================================================================
+NetWatch Check - 2026-10-13 01:56:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:53045 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60463 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54566 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61442 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52442 - "GET /status HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:57:22 AM
+=================================================================
+Router:   ONLINE    Latency: 1 ms      Loss: 0%
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:57:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:61915 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57056 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59643 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62186 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52360 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 27 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:58:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 21 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:58:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:58260 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62125 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54463 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64755 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50249 - "GET /devices HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:59:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 01:59:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:57727 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57898 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54323 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58806 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64057 - "GET /devices HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:00:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:00:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:49746 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57626 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64068 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60760 - "GET /status HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 22 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:01:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 26 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:01:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:63781 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49369 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57971 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55223 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51930 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:02:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:02:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:65269 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59991 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63858 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64477 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49762 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 24 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:03:22 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:03:52 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:52898 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55455 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65094 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58365 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60395 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 23 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 17 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:04:23 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 22 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:04:53 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:55007 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56193 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60695 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52392 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51851 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 22 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:05:23 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+Internet: ONLINE    Latency: 22 ms     Loss: 0%
+DNS:      WORKING   example.com -> 104.20.23.154
+Devices:   3 discovered, 2 responding
+
+Next check in 19 seconds...
+
+=================================================================
+NetWatch Check - 2026-10-13 02:05:53 AM
+=================================================================
+Router:   ONLINE    Latency: 0 ms      Loss: 0%
+INFO:     127.0.0.1:64276 - "GET /history?limit=120 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49399 - "GET /outages?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64879 - "GET /devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62279 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55936 - "GET /stats?limit=500 HTTP/1.1" 200 OK
+Internet: ONLINE    Latency: 25 ms     Loss: 0%
+DNS:      WORKING   example.com -> 172.66.147.243
+Devices:   3 discovered, 2 responding
+
+Next check in 18 seconds...
