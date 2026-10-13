@@ -53,6 +53,22 @@ def initialize_database():
             """
         )
 
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS devices (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                ip_address TEXT NOT NULL,
+                mac_address TEXT NOT NULL UNIQUE,
+                interface_alias TEXT,
+                neighbor_state TEXT,
+                first_seen TEXT NOT NULL,
+                last_seen TEXT NOT NULL,
+                last_online TEXT,
+                is_online INTEGER NOT NULL DEFAULT 0
+            )
+            """
+        )
+
 
 def save_measurement(
     check_type,
@@ -288,3 +304,107 @@ def get_measurements_by_type(check_type, limit=120):
         rows = cursor.fetchall()
 
         return list(reversed(rows))
+
+def save_device(
+    ip_address,
+    mac_address,
+    interface_alias,
+    neighbor_state,
+    is_online,
+):
+    """Insert or update a locally discovered network device."""
+
+    now = datetime.now().astimezone().isoformat(
+        timespec="seconds"
+    )
+
+    with get_connection() as connection:
+        cursor = connection.execute(
+            """
+            SELECT id, first_seen
+            FROM devices
+            WHERE mac_address = ?
+            """,
+            (mac_address,),
+        )
+
+        existing = cursor.fetchone()
+
+        if existing is None:
+            connection.execute(
+                """
+                INSERT INTO devices (
+                    ip_address,
+                    mac_address,
+                    interface_alias,
+                    neighbor_state,
+                    first_seen,
+                    last_seen,
+                    last_online,
+                    is_online
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    ip_address,
+                    mac_address,
+                    interface_alias,
+                    neighbor_state,
+                    now,
+                    now,
+                    now if is_online else None,
+                    int(is_online),
+                ),
+            )
+
+        else:
+            connection.execute(
+                """
+                UPDATE devices
+                SET
+                    ip_address = ?,
+                    interface_alias = ?,
+                    neighbor_state = ?,
+                    last_seen = ?,
+                    last_online = CASE
+                        WHEN ? = 1 THEN ?
+                        ELSE last_online
+                    END,
+                    is_online = ?
+                WHERE mac_address = ?
+                """,
+                (
+                    ip_address,
+                    interface_alias,
+                    neighbor_state,
+                    now,
+                    int(is_online),
+                    now,
+                    int(is_online),
+                    mac_address,
+                ),
+            )
+
+
+def get_devices():
+    """Return all locally discovered devices."""
+
+    with get_connection() as connection:
+        cursor = connection.execute(
+            """
+            SELECT
+                id,
+                ip_address,
+                mac_address,
+                interface_alias,
+                neighbor_state,
+                first_seen,
+                last_seen,
+                last_online,
+                is_online
+            FROM devices
+            ORDER BY is_online DESC, ip_address ASC
+            """
+        )
+
+        return cursor.fetchall()

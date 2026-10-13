@@ -2,6 +2,8 @@ import re
 import socket
 import subprocess
 import time
+import ipaddress
+import json
 from datetime import datetime
 
 from database import (
@@ -10,6 +12,7 @@ from database import (
     initialize_database,
     save_measurement,
     start_outage,
+    save_device,
 )
 
 
@@ -163,6 +166,110 @@ def update_outage_status(internet_online):
             f"{duration} seconds"
         )
 
+def discover_local_devices():
+    """Read Windows' local IPv4 neighbor table."""
+
+    command = [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        (
+            "Get-NetNeighbor -AddressFamily IPv4 | "
+            "Where-Object { "
+            "$_.LinkLayerAddress -and "
+            "$_.LinkLayerAddress -ne '00-00-00-00-00-00' -and "
+            "$_.State -ne 'Permanent' "
+            "} | "
+            "Select-Object "
+            "IPAddress,LinkLayerAddress,State,InterfaceAlias | "
+            "ConvertTo-Json -Compress"
+        ),
+    ]
+
+    result = subprocess.run(
+        command,
+        capture_output=True,
+        text=True,
+    )
+
+    output = result.stdout.strip()
+
+    if not output:
+        return []
+
+    try:
+        raw_devices = json.loads(output)
+    except json.JSONDecodeError:
+        return []
+
+    if isinstance(raw_devices, dict):
+        raw_devices = [raw_devices]
+
+    devices = []
+
+    for device in raw_devices:
+        ip_text = device.get("IPAddress")
+
+        try:
+            ip = ipaddress.ip_address(ip_text)
+        except ValueError:
+            continue
+
+        if (
+            not ip.is_private
+            or ip.is_loopback
+            or ip.is_multicast
+            or ip.is_link_local
+        ):
+            continue
+
+        devices.append(
+            {
+                "ip_address": ip_text,
+                "mac_address": device.get(
+                    "LinkLayerAddress"
+                ),
+                "neighbor_state": device.get(
+                    "State"
+                ),
+                "interface_alias": device.get(
+                    "InterfaceAlias"
+                ),
+            }
+        )
+
+    return devices
+
+def check_local_devices():
+    """Discover local devices and update their status."""
+
+    devices = discover_local_devices()
+
+    responding_count = 0
+
+    for device in devices:
+        ping_result = ping_host(
+            device["ip_address"],
+            count=1,
+        )
+
+        is_online = ping_result["online"]
+
+        if is_online:
+            responding_count += 1
+
+        save_device(
+            ip_address=device["ip_address"],
+            mac_address=device["mac_address"],
+            interface_alias=device["interface_alias"],
+            neighbor_state=device["neighbor_state"],
+            is_online=is_online,
+        )
+
+    print(
+        f"Devices:   {len(devices)} discovered, "
+        f"{responding_count} responding"
+    )
 
 def run_health_check():
     """Run one complete network health check."""
@@ -243,6 +350,8 @@ def run_health_check():
     update_outage_status(
         internet_result["online"]
     )
+    
+    check_local_devices()
 
 
 def main():

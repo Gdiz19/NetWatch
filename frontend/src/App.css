@@ -213,3 +213,79 @@
     height: 300px;
   }
 }
+
+.device-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.device-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid #29313d;
+}
+
+.device-row:last-child {
+  border-bottom: none;
+}
+
+.device-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.device-main > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.device-main span:not(.device-dot) {
+  color: #8d99a8;
+  font-size: 0.85rem;
+}
+
+.device-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.device-dot.online {
+  background: #51d88a;
+}
+
+.device-dot.offline {
+  background: #697382;
+}
+
+.device-details {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.device-details span {
+  color: #8d99a8;
+  font-size: 0.85rem;
+}
+
+.muted {
+  color: #8d99a8;
+}
+
+@media (max-width: 650px) {
+  .device-row {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .device-details {
+    text-align: right;
+  }
+}

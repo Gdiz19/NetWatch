@@ -2,6 +2,7 @@ from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.database import (
+    get_devices,
     get_latest_measurement,
     get_measurement_count,
     get_measurements_by_type,
@@ -32,6 +33,33 @@ def startup_event():
     """Make sure the database exists when the API starts."""
 
     initialize_database()
+
+def device_to_dict(device):
+    """Convert a database device row into JSON-friendly data."""
+
+    (
+        device_id,
+        ip_address,
+        mac_address,
+        interface_alias,
+        neighbor_state,
+        first_seen,
+        last_seen,
+        last_online,
+        is_online,
+    ) = device
+
+    return {
+        "id": device_id,
+        "ip_address": ip_address,
+        "mac_address": mac_address,
+        "interface_alias": interface_alias,
+        "neighbor_state": neighbor_state,
+        "first_seen": first_seen,
+        "last_seen": last_seen,
+        "last_online": last_online,
+        "responding": bool(is_online),
+    }
 
 
 def measurement_to_dict(measurement):
@@ -257,4 +285,16 @@ def stats(
             uptime_percent,
             2,
         ),
+    }
+
+@app.get("/devices")
+def devices():
+    rows = get_devices()
+
+    return {
+        "count": len(rows),
+        "devices": [
+            device_to_dict(row)
+            for row in rows
+        ],
     }

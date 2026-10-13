@@ -60,6 +60,23 @@ type ChartPoint = {
   packetLoss: number | null;
 };
 
+type Device = {
+  id: number;
+  ip_address: string;
+  mac_address: string;
+  interface_alias: string | null;
+  neighbor_state: string | null;
+  first_seen: string;
+  last_seen: string;
+  last_online: string | null;
+  responding: boolean;
+};
+
+type DevicesResponse = {
+  count: number;
+  devices: Device[];
+};
+
 const API_BASE = "http://127.0.0.1:8000";
 
 function App() {
@@ -78,6 +95,9 @@ function App() {
   const [error, setError] =
     useState<string | null>(null);
 
+  const [devices, setDevices] =
+    useState<Device[]>([]);  
+
   async function loadDashboard() {
     try {
       const [
@@ -85,18 +105,21 @@ function App() {
         outagesResponse,
         historyResponse,
         statsResponse,
+        devicesResponse,
       ] = await Promise.all([
         fetch(`${API_BASE}/status`),
         fetch(`${API_BASE}/outages?limit=5`),
         fetch(`${API_BASE}/history?limit=120`),
         fetch(`${API_BASE}/stats?limit=500`),
+        fetch(`${API_BASE}/devices`),
       ]);
 
       if (
         !statusResponse.ok ||
         !outagesResponse.ok ||
         !historyResponse.ok ||
-        !statsResponse.ok
+        !statsResponse.ok ||
+        !devicesResponse.ok
       ) {
         throw new Error("API request failed");
       }
@@ -112,6 +135,9 @@ function App() {
 
       const statsData: StatsResponse =
         await statsResponse.json();
+
+      const devicesData: DevicesResponse =
+        await devicesResponse.json();
 
       const chartData = historyData.measurements.map(
         (measurement) => ({
@@ -132,6 +158,7 @@ function App() {
       setHistory(chartData);
       setStats(statsData);
       setError(null);
+      setDevices(devicesData.devices);
     } catch {
       setError(
         "Unable to connect to the NetWatch API. Make sure FastAPI is running."
@@ -447,6 +474,71 @@ function App() {
             </ResponsiveContainer>
           )}
         </div>
+      </section>
+
+      <section className="panel">
+        <div className="panel-heading">
+          <h2>Local Devices</h2>
+
+          <p>
+            Devices recently visible from this computer
+            on the local network.
+          </p>
+        </div>
+
+        {devices.length === 0 ? (
+          <div className="empty-state">
+            No local devices discovered yet.
+          </div>
+        ) : (
+          <div className="device-list">
+            {devices.map((device) => (
+              <div
+                className="device-row"
+                key={device.id}
+              >
+                <div className="device-main">
+                  <span
+                    className={
+                      device.responding
+                        ? "device-dot online"
+                        : "device-dot offline"
+                    }
+                  ></span>
+
+                  <div>
+                    <strong>
+                      {device.ip_address}
+                    </strong>
+
+                    <span>
+                      {device.mac_address}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="device-details">
+                  <span>
+                    {device.interface_alias ??
+                      "Unknown interface"}
+                  </span>
+
+                  <strong
+                    className={
+                      device.responding
+                        ? "healthy"
+                        : "muted"
+                    }
+                  >
+                    {device.responding
+                      ? "Responding"
+                      : "Not Responding"}
+                  </strong>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="panel">
