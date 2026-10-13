@@ -259,3 +259,32 @@ def get_measurement_count():
         )
 
         return cursor.fetchone()[0]
+
+def get_measurements_by_type(check_type, limit=120):
+    """Return recent measurements for one check type in chronological order."""
+
+    with get_connection() as connection:
+        cursor = connection.execute(
+            """
+            SELECT
+                recorded_at,
+                check_type,
+                target,
+                is_healthy,
+                latency_ms,
+                packet_loss,
+                details
+             FROM measurements
+            WHERE check_type = ?
+            ORDER BY id DESC
+            LIMIT ?
+            """,
+            (
+                check_type,
+                limit,
+            ),
+        )
+
+        rows = cursor.fetchall()
+
+        return list(reversed(rows))

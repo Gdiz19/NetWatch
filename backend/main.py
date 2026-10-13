@@ -4,11 +4,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.database import (
     get_latest_measurement,
     get_measurement_count,
+    get_measurements_by_type,
     get_recent_measurements,
     get_recent_outages,
     initialize_database,
 )
-
 
 app = FastAPI(
     title="NetWatch API",
@@ -145,4 +145,116 @@ def outages(
             outage_to_dict(row)
             for row in rows
         ],
+    }
+
+@app.get("/history")
+def history(
+    limit: int = Query(
+        default=120,
+        ge=1,
+        le=1000,
+    ),
+):
+    rows = get_measurements_by_type(
+        "internet",
+        limit,
+    )
+
+    return {
+        "count": len(rows),
+        "measurements": [
+            measurement_to_dict(row)
+            for row in rows
+        ],
+    }
+
+@app.get("/stats")
+def stats(
+    limit: int = Query(
+        default=500,
+        ge=1,
+        le=5000,
+    ),
+):
+    rows = get_measurements_by_type(
+        "internet",
+        limit,
+    )
+
+    if not rows:
+        return {
+            "sample_size": 0,
+            "average_latency_ms": None,
+            "minimum_latency_ms": None,
+            "maximum_latency_ms": None,
+            "average_packet_loss": None,
+            "uptime_percent": None,
+        }
+
+    latency_values = [
+        row[4]
+        for row in rows
+        if row[4] is not None
+    ]
+
+    packet_loss_values = [
+        row[5]
+        for row in rows
+        if row[5] is not None
+    ]
+
+    healthy_count = sum(
+        1
+        for row in rows
+        if bool(row[3])
+    )
+
+    sample_size = len(rows)
+
+    average_latency = (
+        sum(latency_values) / len(latency_values)
+        if latency_values
+        else None
+    )
+
+    minimum_latency = (
+        min(latency_values)
+        if latency_values
+        else None
+    )
+
+    maximum_latency = (
+        max(latency_values)
+        if latency_values
+        else None
+    )
+
+    average_packet_loss = (
+        sum(packet_loss_values) / len(packet_loss_values)
+        if packet_loss_values
+        else None
+    )
+
+    uptime_percent = (
+        healthy_count / sample_size
+    ) * 100
+
+    return {
+        "sample_size": sample_size,
+        "average_latency_ms": (
+            round(average_latency, 1)
+            if average_latency is not None
+            else None
+        ),
+        "minimum_latency_ms": minimum_latency,
+        "maximum_latency_ms": maximum_latency,
+        "average_packet_loss": (
+            round(average_packet_loss, 2)
+            if average_packet_loss is not None
+            else None
+        ),
+        "uptime_percent": round(
+            uptime_percent,
+            2,
+        ),
     }
